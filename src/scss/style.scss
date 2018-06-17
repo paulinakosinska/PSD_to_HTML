@@ -1,11 +1,28 @@
-@import "node_modules/bootstrap/scss/bootstrap";
-
-$primary-color: rgb(29, 33, 38);
-$secondary-color: rgb(255, 255, 255);
+$primary-color: rgb(255, 255, 255);
+$secondary-color: rgb(29, 33, 38);
 $accent-color: rgb(35, 183, 164);
 
-$headers-font: 'Quattrocento Sans', sans-serif;
+$header-font: 'Quattrocento Sans', sans-serif;
 $main-font: 'Open Sans', sans-serif;
 
+@import "node_modules/bootstrap/scss/bootstrap";
 
+html {
+    font-family: $main-font;
+    background-color: $primary-color;
+}
 
+nav {
+    background-color: rgb(29, 33, 38);
+    min-width: 100vw;
+    position: absolute;
+}
+
+main {
+    height: 100vh;
+}
+
+.navbar-nav {
+    float: left;
+    position: relative;
+}
