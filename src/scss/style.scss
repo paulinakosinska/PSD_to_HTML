@@ -1,6 +1,10 @@
-$primary-color: rgb(255, 255, 255);
-$secondary-color: rgb(29, 33, 38);
-$accent-color: rgb(35, 183, 164);
+$theme-colors: (
+  "primary": rgb(35, 183, 164),
+  "secondary": rgb(255, 255, 255)
+);
+
+$white: rgb(255, 255, 255);
+$accent-color: rgb(29, 33, 38);
 
 $header-font: 'Quattrocento Sans', sans-serif;
 $main-font: 'Open Sans', sans-serif;
@@ -9,7 +13,8 @@ $main-font: 'Open Sans', sans-serif;
 
 html {
     font-family: $main-font;
-    background-color: $primary-color;
+    font-size: 18px;
+    background-color: $white;
 }
 
 nav {
@@ -25,4 +30,45 @@ main {
 .navbar-nav {
     float: left;
     position: relative;
+}
+
+.hero {
+    background: url('../img/background.png');
+    background-color: $accent-color;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    min-width: 100vw;
+}
+
+.jumbotron {
+    background: transparent;
+    text-align: left;
+    padding-left: 0;
+    padding-top: 15%;
+}
+
+.title {
+    font-size: 2rem;
+    font-family: $header-font;
+    color: $white;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.text {
+    background-color: rgb(29, 33, 38);
+    opacity: 0.702;
+    width: 737px;
+    height: 67px;
+    z-index: 190;
+    padding-top: 15px;
+    margin-bottom: 30px;
+}
+
+.lorem-ipsum {
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: rgb(204, 208, 215);
 }
