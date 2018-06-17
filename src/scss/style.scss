@@ -92,16 +92,19 @@ main {
     text-transform: uppercase;
     line-height: 1.167;
     padding-left: 10px;
-    margin: 55px 0 55px 0;
     border-left: 12px solid #E1E6EA;
+}
+
+#team {
+    padding: 55px 0 55px 0;
 }
 
 .team-members-cards {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-top: 40px;
 }
-
 
 .card {
     border-radius: 0;
@@ -139,4 +142,32 @@ main {
     font-size: 0.7rem;
     font-family: $main-font;
     color: rgb(141, 143, 146);
+}
+
+.section-title-dark {
+    font-family: $header-font;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.167;
+    padding-left: 10px;
+    border-left: 12px solid rgba(225, 230, 234, 0.1);
+}
+
+#work{
+    background-color: $accent-color;
+    padding: 55px 0 55px 0;
+}
+
+.projects {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.btn-centrified {
+    text-align: center;
+    margin-top: 55px;
 }
