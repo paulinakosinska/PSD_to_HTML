@@ -125,12 +125,12 @@ main {
 
 .card:hover {
     background-color: $accent-color;
-    .name {
+    .card-title {
         color:rgb(255, 255, 255);
     }
 }
 
-.name {
+.card-title {
     font-size: 0.9rem;
     font-family: $header-font;
     color: rgb(41, 47, 54);
@@ -138,7 +138,7 @@ main {
     text-transform: uppercase;
 }
 
-.position{
+.card-description{
     font-size: 0.7rem;
     font-family: $main-font;
     color: rgb(141, 143, 146);
@@ -170,4 +170,41 @@ main {
 .btn-centrified {
     text-align: center;
     margin-top: 55px;
+}
+
+#what-we-do {
+    padding: 55px 0 55px 0;
+}
+
+.services {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.service {
+    width: 200px;
+    height: 300px;
+}
+
+.card-icons {
+    text-align: center;
+}
+
+.service-title {
+    font-size: 0.9rem;
+    font-family: $header-font;
+    color: rgb(41, 47, 54);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+
+.service-description {
+    font-size: 0.7rem;
+    font-family: $main-font;
+    color: rgb(141, 143, 146);
+    text-align: center;
 }
