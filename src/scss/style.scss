@@ -60,7 +60,7 @@ main {
 .text {
     background-color: rgb(29, 33, 38);
     opacity: 0.702;
-    width: 737px;
+    width: 57vw;
     height: 67px;
     z-index: 190;
     padding-top: 15px;
@@ -71,4 +71,11 @@ main {
     font-size: 0.8rem;
     font-weight: 100;
     color: rgb(204, 208, 215);
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    left: 40vw;
 }
