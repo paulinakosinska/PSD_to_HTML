@@ -27,6 +27,10 @@ main {
     height: 100vh;
 }
 
+.nav-link {
+    text-transform: uppercase;
+}
+
 .navbar-nav {
     float: left;
     position: relative;
@@ -55,6 +59,7 @@ main {
     color: $white;
     font-weight: 400;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .text {
@@ -78,4 +83,60 @@ main {
     height: 10px;
     border-radius: 100%;
     left: 40vw;
+}
+
+.section-title {
+    font-family: $header-font;
+    font-size: 2rem;
+    color: rgb(41, 47, 54);
+    text-transform: uppercase;
+    line-height: 1.167;
+    padding-left: 10px;
+    margin: 55px 0 55px 0;
+    border-left: 12px solid #E1E6EA;
+}
+
+.team-members-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    border-radius: 0;
+    border:none;
+    background-color: rgb(225, 230, 234);
+    cursor: pointer;
+}
+
+.card-img-top {
+    border-radius: 0;
+}
+
+.card-body {
+    width: 263px;
+    height: 74px;
+    line-height: 0.3rem;
+}
+
+.card:hover {
+    background-color: $accent-color;
+    .name {
+        color:rgb(255, 255, 255);
+    }
+}
+
+.name {
+    font-size: 0.9rem;
+    font-family: $header-font;
+    color: rgb(41, 47, 54);
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.position{
+    font-size: 0.7rem;
+    font-family: $main-font;
+    color: rgb(141, 143, 146);
 }

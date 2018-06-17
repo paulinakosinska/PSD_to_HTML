@@ -26,25 +26,25 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ABOUT</a>
+                        <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">WORK</a>
+                        <a class="nav-link" href="#">Work</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">TEAM</a>
+                        <a class="nav-link" href="#team">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SERVICES</a>
+                        <a class="nav-link" href="#">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FEATURES</a>
+                        <a class="nav-link" href="#">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                     </ul>
                 </div>
@@ -52,7 +52,7 @@
         </nav>
     </header>
     <main>
-        <div class="hero carousel slide" data-ride="carousel">
+        <section class="hero carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -78,17 +78,42 @@
                     <img class="d-block w-100" src="..." alt="Third slide">
                 </div>
             </div>
-            <!-- <div class="container">
-                <div class="jumbotron">
-                    <h1 class="title">Welcome to our marketplace</h1>
-                    <div class="text">
-                        <p class="lorem-ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</p>
+        </section>
+        <section id="team">
+            <div class="container">
+                <h2 class="section-title">Meet the team.</h2>
+            </div>
+            <div class="container team-members-cards">
+                <div class="card">
+                    <img class="card-img-top" src="./img/gloria_bromley.png" alt="Gloria Bromley's photo">
+                    <div class="card-body">
+                        <p class="name">Gloria Bromley</p>
+                        <p class="position">CEO and Founder</p>
                     </div>
-                    <button type="button" class="btn btn-primary">View more</button>
-                    <button type="button" class="btn btn-outline-secondary">Video tour</button>
                 </div>
-            </div> -->
-        </div>
+                <div class="card">
+                    <img class="card-img-top" src="./img/paul_torres.png" alt="Gloria Bromley's photo">
+                    <div class="card-body">
+                        <p class="name">Paul Torres</p>
+                        <p class="position">Head of Development</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="./img/judith_gillette.png" alt="Gloria Bromley's photo">
+                    <div class="card-body">
+                        <p class="name">Judith Gillette</p>
+                        <p class="position">Graphic Designer</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="./img/delores_reed.png" alt="Gloria Bromley's photo">
+                    <div class="card-body">
+                        <p class="name">Delores Reed</p>
+                        <p class="position">Client Service Director</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
