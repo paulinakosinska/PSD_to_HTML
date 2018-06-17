@@ -14,10 +14,19 @@ gulp.task("scss", function () {
     }))
 });
 
-gulp.task('watch', ['browserSync'], function () {
+gulp.task("files", function () {
+  return gulp.src('src/**/*.+(html|js)')
+    .pipe(gulp.dest('dist'))
+});
+
+gulp.task("reload", ["files"], function () {
+    browserSync.reload();
+});
+
+gulp.task('default', ['browserSync'], function () {
   gulp.watch('src/scss/**/*.scss', ['scss']);
-  gulp.watch('src/index.html', browserSync.reload);
-  gulp.watch('src/js/script.js', browserSync.reload);
+  gulp.watch('src/index.html', ['reload']);
+  gulp.watch('src/js/script.js', ['reload']);
 });
 
 gulp.task('browserSync', function () {
