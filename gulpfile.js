@@ -14,12 +14,12 @@ gulp.task("scss", function () {
     }))
 });
 
-gulp.task("files", function () {
+gulp.task('files', function () {
   return gulp.src('src/**/*.+(html|js)')
     .pipe(gulp.dest('dist'))
 });
 
-gulp.task("reload", ["files"], function () {
+gulp.task('reload', ['files'], function () {
     browserSync.reload();
 });
 
@@ -49,3 +49,7 @@ gulp.task('images', function () {
     ]))
     .pipe(gulp.dest('dist/img'))
 });
+
+gulp.task('build', [`images`, `files`, `scss`], function (){
+  console.log('Building files');
+})
