@@ -4,9 +4,13 @@ $theme-colors: (
 );
 
 $white: rgb(255, 255, 255);
+$light-grey: rgb(225, 230, 234);
 $accent-color: rgb(29, 33, 38);
+$title-color: rgb(41, 47, 54);
+$background-grey-color: rgb(78, 90, 98);
+$paragraph-color: rgb(141, 143, 146);
 
-$header-font: 'Quattrocento Sans', sans-serif;
+$title-font: 'Quattrocento Sans', sans-serif;
 $main-font: 'Open Sans', sans-serif;
 
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -14,11 +18,11 @@ $main-font: 'Open Sans', sans-serif;
 html {
     font-family: $main-font;
     font-size: 18px;
-    background-color: $white;
+    background: $white;
 }
 
 nav {
-    background-color: rgb(29, 33, 38);
+    background: $accent-color;
     min-width: 100vw;
     position: absolute;
 }
@@ -27,7 +31,7 @@ main {
     height: 100vh;
 }
 
-.nav-link {
+.nav-item {
     text-transform: uppercase;
 }
 
@@ -37,7 +41,7 @@ main {
 }
 
 .hero {
-    background: url('../img/background.png');
+    background-image: url('../img/background.png');
     background-color: $accent-color;
     background-position: center;
     background-repeat: no-repeat;
@@ -55,7 +59,7 @@ main {
 
 .title {
     font-size: 2rem;
-    font-family: $header-font;
+    font-family: $title-font;
     color: $white;
     font-weight: 400;
     text-transform: uppercase;
@@ -63,10 +67,10 @@ main {
 }
 
 .text {
-    background-color: rgb(29, 33, 38);
+    background: $accent-color;
     opacity: 0.702;
     width: 57vw;
-    height: 67px;
+    line-height: 1.5rem;
     z-index: 190;
     padding-top: 15px;
     margin-bottom: 30px;
@@ -86,13 +90,13 @@ main {
 }
 
 .section-title {
-    font-family: $header-font;
+    font-family: $title-font;
     font-size: 2rem;
-    color: rgb(41, 47, 54);
+    color: $title-color;
     text-transform: uppercase;
     line-height: 1.167;
     padding-left: 10px;
-    border-left: 12px solid #E1E6EA;
+    border-left: 12px solid $light-grey;
 }
 
 #team {
@@ -109,8 +113,29 @@ main {
 .card {
     border-radius: 0;
     border:none;
-    background-color: rgb(225, 230, 234);
+    background: $light-grey;
     cursor: pointer;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.social-links {
+    position: absolute;
+    display: none;
+}
+
+.team-member:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease;
+    .social-links {
+        display: block;
+        z-index: 1;
+    }
+    .card-img-top {
+        opacity: 0.7;
+    }
 }
 
 .card-img-top {
@@ -124,16 +149,16 @@ main {
 }
 
 .card:hover {
-    background-color: $accent-color;
+    background: $background-grey-color;
     .card-title {
-        color:rgb(255, 255, 255);
+        color:$white;
     }
 }
 
 .card-title {
     font-size: 0.9rem;
-    font-family: $header-font;
-    color: rgb(41, 47, 54);
+    font-family: $title-font;
+    color: $title-color;
     text-align: left;
     text-transform: uppercase;
 }
@@ -141,13 +166,21 @@ main {
 .card-description{
     font-size: 0.7rem;
     font-family: $main-font;
-    color: rgb(141, 143, 146);
+    color: $paragraph-color;
+}
+
+.members-social-links {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    padding: 20px;
+    background: $background-grey-color;
 }
 
 .section-title-dark {
-    font-family: $header-font;
+    font-family: $title-font;
     font-size: 2rem;
-    color: rgb(255, 255, 255);
+    color: $white;
     text-transform: uppercase;
     line-height: 1.167;
     padding-left: 10px;
@@ -155,7 +188,7 @@ main {
 }
 
 #work{
-    background-color: $accent-color;
+    background: $background-grey-color;
     padding: 55px 0 55px 0;
 }
 
@@ -166,8 +199,56 @@ main {
     flex-wrap: wrap;
     cursor: pointer;
 }
+.project {
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+    margin-bottom: 15px;
 
-.btn-centrified {
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .plus {
+        position: absolute;
+        bottom: 40%;
+        color: $white;
+        width: 100%;
+        transition: .5s ease;
+        opacity:0;
+        font-size: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        background: $accent-color;
+        color: $white;
+        width: 100%;
+        transition: .5s ease;
+        opacity:0;
+        font-size: 0.7rem;
+        font-weight: 100;
+        padding: 12px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+}
+
+.project:hover .overlay {
+opacity: 1;
+}
+
+.project:hover .plus {
+opacity: 1;
+}
+
+.btn-center {
     text-align: center;
     margin-top: 55px;
 }
@@ -177,16 +258,14 @@ main {
 }
 
 .services {
-    padding-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    padding: 40px;
     cursor: pointer;
 }
 
 .service {
     width: 200px;
     height: 300px;
+    margin: 30px;
 }
 
 .card-icons {
@@ -195,8 +274,8 @@ main {
 
 .service-title {
     font-size: 0.9rem;
-    font-family: $header-font;
-    color: rgb(41, 47, 54);
+    font-family: $title-font;
+    color: $title-color;
     text-align: center;
     text-transform: uppercase;
     margin-top: 25px;
@@ -205,6 +284,97 @@ main {
 .service-description {
     font-size: 0.7rem;
     font-family: $main-font;
-    color: rgb(141, 143, 146);
+    color: $paragraph-color;
     text-align: center;
+}
+
+.mapouter {
+    margin-top: 50px;
+    text-align:right;
+}
+
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    z-index: -1;
+}
+
+.contact-container {
+    margin-bottom: 120px;
+    z-index: 9999;
+}
+
+#contact-form {
+    position: absolute;
+    top: -65px;
+    background: $white;
+    padding: 20px;
+}
+
+.contact-header {
+    text-transform: uppercase;
+    font-family: $title-font;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 60px 0 50px 0;
+    text-align: left;
+}
+
+.contact-details {
+    font-size: 0.9rem;
+    font-family: $main-font;
+    color: $paragraph-color;
+    text-align: left;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: $paragraph-color;
+}
+
+input[type="text"], textarea[type="textarea"] {
+    background: $light-grey;
+  }
+
+#success-message{
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+#error-message{
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+.footer {
+    background: $background-grey-color;
+    font-size: 0.7rem;
+    font-weight: 100;
+    color: $white;
+    padding-top: 25px;
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+}
+
+.social-media {
+    text-align: right;
+}
+
+.footer-social-links {
+    background: $background-grey-color;
+    margin: 0 10px 0 10px;
+    font-size: 1rem;
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
 }
